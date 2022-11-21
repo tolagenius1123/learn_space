@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 import FormField from './reusables/FormField'
 import Button from './reusables/Button'
 import './reusables/reusables.css'
+import { useNavigate } from 'react-router-dom'
 
 const Address = () => {
+
+    const navigate = useNavigate()
 
     const [country, setCountry] = useState("")
     const [state, setState] = useState("")
@@ -46,6 +49,7 @@ const Address = () => {
             setPostalCode("")
             setStreetName("")
             setStreetNo2("")
+            navigate('/addProgram')
         }, 3000)
 
     }
